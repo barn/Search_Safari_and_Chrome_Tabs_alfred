@@ -14,6 +14,7 @@ module BrowserTabs
       @supported_browsers ||= [
         'Safari',
         'WebKit',
+        'Google Chrome Beta',
         'Google Chrome',
         'Google Chrome Canary',
         'Chromium'

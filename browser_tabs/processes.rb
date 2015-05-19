@@ -24,6 +24,9 @@ module BrowserTabs
     def process_name(app_name)
       if app_name == 'WebKit'
         "Safari.app/Contents/MacOS/SafariForWebKitDevelopment"
+      elsif app_name == 'Google Chrome Beta'
+        ps.match(%r{Google Chrome Beta.app/Contents/Versions/[\d\.]+/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper})[0]
+        # 'Google Chrome Beta.app/Contents/Versions/43.0.2357.65/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper'
       else
         "#{app_name}.app/Contents/MacOS/#{app_name}"
       end
