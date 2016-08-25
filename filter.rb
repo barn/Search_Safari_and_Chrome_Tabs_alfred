@@ -16,7 +16,7 @@ end
 
 # Search anchored to the start of words (including CamelCase)
 def tab_matches_title?(tab, q)
-  search_regexp = /(\b|[\/\._-])#{Regexp.escape(q)}/
+  search_regexp = /(\b|[\/\._-])*#{Regexp.escape(q)}/
 
   tab.title.downcase =~ search_regexp ||
   # Break CamelCase words into their individual components and search
